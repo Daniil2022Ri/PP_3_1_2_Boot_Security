@@ -1,12 +1,17 @@
 package ru.kata.spring.boot_security.demo.configs.entity;
 
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
-
+@Entity(name = "worker")
 public class User {
 
-
-    private int id;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String firstName;
     private String lastName;
     private String email;
@@ -17,7 +22,7 @@ public class User {
     private String card;
 
 
-    public User(int id, String firstName, String lastName, String email,
+    public User(long id, String firstName, String lastName, String email,
                 String work, String card, int age, int moneyWork){
         this.id = id;
         this.firstName = firstName;
@@ -29,10 +34,10 @@ public class User {
         this.moneyWork = moneyWork;
     }
 
-    public void setId(int id){
+    public void setId(long id){
         this.id = id;
     }
-    public void getId(int id){
+    public void getId(long id){
         this.id = id;
     }
     public void setFirstName(String firstName){
@@ -83,6 +88,7 @@ public class User {
     @Override
     public String toString(){
         return "User" +
+                "id - " + id +
                 " firstName - '" + firstName +
                 " lastName - " + lastName +
                 " email - " + email +

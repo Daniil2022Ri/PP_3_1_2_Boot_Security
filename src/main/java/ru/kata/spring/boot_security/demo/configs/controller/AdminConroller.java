@@ -11,4 +11,6 @@ public class AdminConroller {
         public String helloAdmin(){
             return "Admin panel";
         }
+
+
 }

@@ -1,38 +1,32 @@
 package ru.kata.spring.boot_security.demo.configs.entity;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity(name = "worker")
 public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private Long id;
+    @Column
     private String firstName;
+    @Column
     private String lastName;
+    @Column
     private String email;
+    @Column
     private int age;
 
+    @Column
     private String work;
+    @Column
     private int moneyWork;
+    @Column
     private String card;
 
-
-    public User(long id, String firstName, String lastName, String email,
-                String work, String card, int age, int moneyWork){
-        this.id = id;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.email = email;
-        this.work = work;
-        this.card = card;
-        this.age = age;
-        this.moneyWork = moneyWork;
-    }
 
     public void setId(long id){
         this.id = id;
@@ -84,6 +78,14 @@ public class User {
     public void getCard(String email){
         this.email = email;
     }
+
+
+    @ManyToMany
+    @JoinTable(
+            name = "users_roles",
+            joinColumns = @JoinColumn(name = "user_id")
+    )
+    private Set<Role> roles = new HashSet<>();
 
     @Override
     public String toString(){

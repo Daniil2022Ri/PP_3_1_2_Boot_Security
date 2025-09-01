@@ -2,25 +2,24 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Spring Security Example</title>
-    <link rel="stylesheet" href="style/style.css">
-    <link rel="stylesheet" href="style/animation.css">
+    <link href ="style.css" rel="stylesheet">
 </head>
 <body>
-<h1 class = "welcome">Welcome to Admine Panel!</h1>
+<div class = "header_welcome">
+    <h1 class = "welcome">Welcome to Admine Panel!</h1>
+</div>
+
 <main>
     <div class = "header">
         <div id ="header_projects_all_buttons" class = "header_project">
             <nav class = "navigation">
                 <ul class ="navigation_project">
-                    <li class = "monitoring_project"><button class ="open_monitoring_project">Open All Project</button></li>
+                    <li class = "monitoring_project"><button id ="btn_monitoring" class ="open_monitoring_project">Open All Project</button></li>
                     <li class = "monitoring_worker_working_hours"><button class = "worker_hours">Worker Hours</button></li>
                     <li class = "monitoring_money_working_and_teamLeed"><button class ="worker_money">money Worker</button></li>
                     <li class = "monitorung_report_working_databace"><button class ="reports">Reports</button></li>
                 </ul>
             </nav>
-            <div class="button_close">
-                <button class = "Close_navigation_project">Close</button>
-            </div>
         </div>
         <div id ="all_projects" class="header_all_project">
             <div class = "all Project">
@@ -33,7 +32,11 @@
             <button class = "close_all_project">close</button>
         </div>
 
-
+        <div id ="Panel_delete_project" class ="warning_DeleteProject">
+            <h2>Do you want delete Project</h2>
+            <button id="deleteBTN_project">Yes</button>
+            <button ide="deletBTN_not_project">No</button>
+        </div>
 
         <div class = "worker_from_poject">
             <h2>Your worker</h2>

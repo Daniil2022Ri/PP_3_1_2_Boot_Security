@@ -1,0 +1,16 @@
+.content{
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.content.visible{
+    opacity: 1;
+    max-height: 500px;
+}
+
+.content.hidden{
+    opacity: 0;
+    max-height: 0;
+}

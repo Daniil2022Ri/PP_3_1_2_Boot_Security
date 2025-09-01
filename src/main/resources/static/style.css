@@ -1,6 +1,10 @@
 .header{
     
 }
+.header_welcome{
+    display: flex;
+    justify-content: center;
+}
 
 .navigation , 
 .navigation_project {

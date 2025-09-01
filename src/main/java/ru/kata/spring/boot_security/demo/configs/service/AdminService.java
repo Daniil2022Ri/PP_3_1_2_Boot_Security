@@ -5,7 +5,7 @@ import ru.kata.spring.boot_security.demo.configs.entity.User;
 
 import java.util.List;
 
-@Service
+//@Service
 public interface AdminService {
 
     public void AddNewWorker(int id, String firstName , String lastname , int age , String email ,

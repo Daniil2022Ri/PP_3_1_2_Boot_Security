@@ -2,7 +2,7 @@ package ru.kata.spring.boot_security.demo.configs.service;
 
 import org.springframework.stereotype.Service;
 
-@Service
+//@Service
 public interface WorkerService {
 
     public void Working(int id , String firstName, String lastName);

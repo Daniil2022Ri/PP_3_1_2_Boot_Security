@@ -1,0 +1,37 @@
+.header{
+    
+}
+
+.navigation , 
+.navigation_project {
+    display: flex;
+    margin: 0%;
+    padding: 20px;
+    border: 0;
+    justify-content: center;
+}
+.button_close{
+    display: flex;
+    justify-content: center;
+}
+
+.open_monitoring_project ,
+.worker_hours , 
+.worker_money ,
+.reports ,
+.Close_navigation_project{
+    width: 150px;
+    max-width: 500px;
+    min-width:150px ;
+    max-height: 500px;
+    min-height: 20px;
+    height: 50px;
+}
+
+.monitoring_project , 
+.monitoring_worker_working_hours,
+.monitoring_money_working_and_teamLeed,
+.monitorung_report_working_databace{
+    padding: 30px;
+
+}

@@ -14,3 +14,8 @@
     opacity: 0;
     max-height: 0;
 }
+
+
+.header_all_project{
+    display: none;
+}

@@ -2,7 +2,9 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org" xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
     <title>Spring Security Example</title>
-    <link href ="style.css" rel="stylesheet">
+    <link th:href ="@{css/style.css}" rel="stylesheet">
+    <link rel="stylesheet" href="/src/main/resources/static/css/animation.css">
+    <link rel="stylesheet" href="/src/main/resources/static/css/style.css">
 </head>
 <body>
 <div class = "header_welcome">
@@ -29,7 +31,7 @@
                 <td class = "project_2"><button>Sberbank</button></td>
                 <td class = "project_3"><button>Wildberes</button></td>
             </tr>
-            <button class = "close_all_project">close</button>
+            <button id = "btn_close_TableAll" class = "close_all_project">Close</button>
         </div>
 
         <div id ="Panel_delete_project" class ="warning_DeleteProject">
@@ -56,6 +58,7 @@
         </div>
     </div>
 </main>
-<script scr = "scripts/script.js"></script>
+<script src ="/src/main/resources/static/js/script.js"></script>
+<script th:src="@{/js/script.js}"></script>
 </body>
 </html>

@@ -16,6 +16,12 @@
 }
 
 
-.header_all_project{
+.header_all_project , 
+.warning_DeleteProject ,
+.worker_from_poject,
+.action_workers_base,
+.all_workers_base ,
+.admin_addUsers{
     display: none;
+    
 }

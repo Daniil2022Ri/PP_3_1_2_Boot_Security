@@ -6,7 +6,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "worker")
-public class User {
+public class Worker {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,6 +26,8 @@ public class User {
     private int moneyWork;
     @Column
     private String card;
+    @Column
+    private String level;
 
 
     public void setId(long id){
@@ -78,6 +80,9 @@ public class User {
     public void getCard(String email){
         this.email = email;
     }
+
+    public void setLevel(String level){this.level = level;}
+    public void getLevel(String level){this.level = level;}
 
 
     @ManyToMany

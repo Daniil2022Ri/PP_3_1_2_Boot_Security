@@ -5,9 +5,9 @@ import org.springframework.stereotype.Service;
 //@Service
 public interface WorkerService {
 
-    public void Working(int id , String firstName, String lastName);
-    public void EndWorking(int id , String firstName, String lastName , String WhyWorking);
-
-    public void TakeMoney(int id, String firstName, String lastName, String email);
+    public void Working(Long id , String firstName, String lastName);
+    public void EndWorking(Long id , String firstName, String lastName , String WhyWorking);
+    public void StartingWork(Long id ,String firstName, String lastName);
+    public void TakeMoney(Long id, String firstName, String lastName, String email);
 
 }

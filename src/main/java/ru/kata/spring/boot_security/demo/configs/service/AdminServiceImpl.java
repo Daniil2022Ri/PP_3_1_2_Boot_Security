@@ -1,33 +1,19 @@
 package ru.kata.spring.boot_security.demo.configs.service;
 
-import ru.kata.spring.boot_security.demo.configs.entity.User;
+import ru.kata.spring.boot_security.demo.configs.entity.Worker;
 
 import java.util.List;
 
-public class AdminServiceImpl implements AdminService {
+public class AdminServiceImpl {
 
-    @Override
-    public void AddNewWorker(int id, String firstName, String lastname, int age, String email, String work, int money, String card) {
+    private final AdminService adminService;
 
+    public AdminServiceImpl (AdminService adminService){
+        this.adminService = adminService;
     }
 
-    @Override
-    public void UpadateUserWork(String work, int money, String card) {
-
+    public List<Worker> findAllWorkers(){
+        return adminService.AllWorker();
     }
-
-    @Override
-    public void DeleteWorker(int id, String firstName, String lastName) {
-
-    }
-
-    @Override
-    public void ByMoneyWorker(int id, String firstName, String lastName, String card, String work, int money) {
-
-    }
-
-    @Override
-    public List<User> AllWorker() {
-        return List.of();
-    }
+    public void addWorkerFromProject()
 }

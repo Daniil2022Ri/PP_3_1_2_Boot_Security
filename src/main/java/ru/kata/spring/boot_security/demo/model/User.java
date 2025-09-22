@@ -10,6 +10,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import javax.persistence.*;
 import java.util.Collection;
 import java.util.List;
+import java.util.Set;
 
 @Entity
 @Data
@@ -22,8 +23,8 @@ public class User implements UserDetails {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private Long id;
-    @Column(name = "firsName")
-    private String firstName;
+    @Column(name = "username")
+    private String username;
     @Column(name = "lastName")
     private String lastName;
     @Column(name = "age")
@@ -48,7 +49,7 @@ public class User implements UserDetails {
 
     public User(Long id, String username, String lastName, int age, String password, boolean enabled, List<Role> roles) {
         this.id = id;
-        this.firstName = username;
+        this.username = username;
         this.lastName = lastName;
         this.age = age;
         this.passwordUser = password;

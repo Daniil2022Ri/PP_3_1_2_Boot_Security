@@ -13,6 +13,8 @@ public class SpringBootSecurityDemoApplication {
 
 }
 /*
-*
-*
-* */
+* Добавить в базе User и Admin полученные зашифрованные данные, шифровка в классе (EncodePasswords)
+* либо
+* User:   $2a$10$NMdmfzJte.YIG0Ic1nUznuEqWqgr508JMy.ocWS8fmL91h2EXzBO.
+* Admin: 	$2a$10$nE2Hm9iVzcUqZMPIdKTjYeQuZ3mW8PtGlWTuh8wsXZnVtzdsWH30m
+*/

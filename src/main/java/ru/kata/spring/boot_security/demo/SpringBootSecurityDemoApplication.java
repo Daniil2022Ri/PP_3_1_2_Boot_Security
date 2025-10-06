@@ -10,4 +10,10 @@ public class SpringBootSecurityDemoApplication {
 		SpringApplication.run(SpringBootSecurityDemoApplication.class, args);
 	}
 
+	//Шифровка пароля в классе PasswordEncoderGenerator
+
+	//Для входа используем Email и пароль который зашифровали и закинули UserServiceImpl в метод construct
+
+
 }
+
